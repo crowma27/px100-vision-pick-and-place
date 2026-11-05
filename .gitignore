@@ -1,0 +1,30 @@
+# MATLAB
+*.asv
+*.m~
+*.autosave
+*.slx.autosave
+*.mdl.autosave
+*.slxc
+*.slprj/
+slprj/
+
+# MATLAB figures
+*.fig
+
+# Large data
+# *.mat
+# *.csv
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs / editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# JeroMQ (auto-downloaded)
+*.jar
