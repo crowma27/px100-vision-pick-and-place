@@ -1,4 +1,7 @@
+
 # PX100 Vision Pick-and-Place
+
+[![Ask DeepWiki](https://deepwiki.com/badge.svg)](https://deepwiki.com/crowma27/px100-vision-pick-and-place)
 
 A **monocular-vision pick-and-place** system for the PX100 robot arm in CoppeliaSim.
 The arm picks up a blue cube and drops it on a green target, using **only one RGB camera** — no depth sensor.
