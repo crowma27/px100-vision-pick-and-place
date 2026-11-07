@@ -70,7 +70,7 @@ function main_program()
     t_loop = tic;
     
     while ~stop
-        % 1. Leituras
+        % Leituras
         q_read    = robot_arm.get_joints();
         %objectPos = sim_interface.get_target_position(cfg.BLUE_CUBE);
         %targetPos = sim_interface.get_target_position(cfg.TARGET_GREEN);
@@ -81,14 +81,14 @@ function main_program()
           
         end
 
-        % 2. Decisao (maquina de estados)
+        % maquina de estados
         [q_cmd, stop] = fsm.step(cfg, robot_arm, Links, q_read, q_cmd, objectPos, targetPos);
 
-        % 3. Seguranca + envio
+        % Seguranca + envio
         q_cmd = JointUtils.clamp(q_cmd, qmin, qmax);
         if robot_arm.set_joints(q_cmd) == 1, break; end
 
-        % 4. Avancar simulacao e sincronizar relogio
+        % Avancar simulacao e sincronizar relogio
         sim_interface.step_simulation();
         elapsed = toc(t_loop);
         if elapsed < cfg.dt_loop, pause(cfg.dt_loop - elapsed); end
