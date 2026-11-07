@@ -7,8 +7,7 @@ function scene = capture_scene(sim_interface, cfg, cam_model, detector, opts)
 %   objectPos = scene.objectPos;   % [x;y;z] centro do azul
 %   targetPos = scene.targetPos;   % [x;y;z] base do verde
 %
-%   Opcional:
-%     scene = capture_scene(..., struct('show', true));
+
 
 if nargin < 5 || isempty(opts), opts = struct(); end
 if ~isfield(opts, 'show'), opts.show = false; end
